@@ -5,24 +5,25 @@ class BaseConfig:
     """Base Configuration"""
 
     TESTING = False
-    SQL_ALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECRET_KEY = "my_precious"
 
 
 class DevelopmentConfig(BaseConfig):
     """Development Configuration"""
 
-    SQL_ALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class TestingConfig(BaseConfig):
     """Testing Configuration"""
 
     TESTING = True
-    SQL_ALCHEMY_DATABASE_URI = os.environ.get("DATABASE_TEST_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_TEST_URL")
 
 
 class ProductionConfig(BaseConfig):
     """Production Configuration"""
 
-    SQL_ALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
