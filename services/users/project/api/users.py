@@ -90,4 +90,3 @@ def index():
 api.add_resource(UsersPing, "/users/ping")
 api.add_resource(UsersList, "/users")
 api.add_resource(Users, "/users/<user_id>")
-
