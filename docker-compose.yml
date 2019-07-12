@@ -33,6 +33,6 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - 80:80
+      - 8084:80
     depends_on:
       - users
